@@ -1,7 +1,3 @@
-export const metadata = {
-  title: 'Walky Doggy | Walks',
-};
-
 export default function Walks() {
   return (
     <main>

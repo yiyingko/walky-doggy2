@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Admin() {
   return (
     <main>
       <h2>Admin Dashboard</h2>
