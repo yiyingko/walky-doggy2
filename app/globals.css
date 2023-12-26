@@ -1,6 +1,6 @@
 /* base styles */
 body {
-    background-image: url('../public/background-2.png');
+    background-image: url('../public/background-2.jpg');
 }
 
 /*Navbar*/
@@ -34,7 +34,7 @@ nav {
 .nav-btn {
     width: 150px;
     height: 60px;
-    background-color: #b1cee8;
+    background-color: #8993ff;
     color: black;
     border-radius: 40px;
     font-size: 24px;
