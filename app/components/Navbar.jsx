@@ -13,7 +13,7 @@ export default function Navbar() {
         height={100}
         quality={100}
       />
-      <div className="nav-links">
+      {/* <div className="nav-links">
         <div className="nav-link">
           <Link
             className="link-text"
@@ -28,7 +28,7 @@ export default function Navbar() {
             Walks
           </Link>
         </div>
-      </div>
+      </div> */}
       <button className="nav-btn">Log In</button>
     </nav>
   );
