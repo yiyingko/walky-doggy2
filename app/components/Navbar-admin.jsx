@@ -12,7 +12,7 @@ export default function Navbar() {
         height={100}
         quality={100}
       />
-      <button className="nav-btn">Log In</button>
+      <button className="nav-btn">Log Out</button>
     </nav>
   );
 }

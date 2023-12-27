@@ -3,7 +3,7 @@ body {
     background-image: url('../public/background-2.jpg');
 }
 
-/*Navbar*/
+/*Navbar & Navbar-user*/
 
 nav {
     display: flex;
@@ -18,14 +18,15 @@ nav {
 .nav-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 50px;
-    width: 200px;
+    column-gap: 10px;
+    width: 600px;
     height: 50px;
     margin-right: 100px;
+    margin-left: 100px;
 }
 
 .nav-link {
-    font-size: 28px;
+    font-size: 24px;
     color: black;
     margin-top: 80px;
     font-weight: 600;
