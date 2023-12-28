@@ -1,0 +1,28 @@
+{
+  "walks": [
+    {
+      "id": "1",
+      "Dog_Name": "Meli",
+      "Pick_up_at": "Greenwich Park",
+      "Post_code": "SE12 3GG",
+      "Date": "24-12-2023",
+      "user_email": "mario@netninja.dev"
+    },
+    {
+      "id": "2",
+      "Dog_Name": "Rocco",
+      "Pick_up_at": "Utah Forest",
+      "Post_code": "SE14 3WY",
+      "Date": "24-01-2024",
+      "user_email": "mario@netninja.dev"
+    },
+    {
+      "id": "3",
+      "Dog_Name": "Bobby",
+      "Pick_up_at": "33 Greenwich High Road",
+      "Post_code": "SE10 8AB",
+      "Date": "24-12-2023",
+      "user_email": "mario@netninja.dev"
+    }
+  ]
+}

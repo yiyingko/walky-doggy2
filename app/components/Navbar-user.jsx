@@ -17,14 +17,14 @@ export default function Navbar() {
         <div className="nav-link">
           <Link
             className="link-text"
-            href="/"
+            href="/dashboard/form"
             // style={{ textDecoration: 'none' }}
           >
             Book a Walk
           </Link>
         </div>
         <div className="nav-link">
-          <Link className="link-text" href="/user/walks">
+          <Link className="link-text" href="/dashboard">
             Dashboard
           </Link>
         </div>

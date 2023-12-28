@@ -1,9 +1,9 @@
-export default function Walks() {
+export default function Form() {
   return (
     <main>
       <nav>
         <div>
-          <h2>Walks</h2>
+          <h2>Booking form</h2>
           <p>
             <small>Currently Booked Walks</small>
           </p>
