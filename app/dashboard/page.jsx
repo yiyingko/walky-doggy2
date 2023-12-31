@@ -1,17 +1,24 @@
 import WalkList from './WalkList';
+import PastList from './PastList';
 
 export default function Walks() {
   return (
-    <main>
-      <nav>
+    <div className="dash-wrapper">
+      <main className="dash-container">
         <div>
-          <h2>Walks</h2>
-          <p>
-            <small>Currently booked walks.</small>
-          </p>
+          <div className="dash-heading">
+            <h2>Currently booked walks.</h2>
+          </div>
+          <WalkList />
         </div>
-      </nav>
-      <WalkList />
-    </main>
+
+        <div>
+          <div className="dash-heading">
+            <h2>Check Past walk record</h2>
+          </div>
+          <PastList />
+        </div>
+      </main>
+    </div>
   );
 }

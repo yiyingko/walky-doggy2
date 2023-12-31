@@ -15,8 +15,10 @@ export default async function WalkList() {
     <>
       {walks.map((walk) =>
         walk.date > new Date(Date.now()).toISOString().slice(0, 10) ? (
+          ''
+        ) : (
           <div className="list-container" key={walk.id}>
-            <div className="list-grid1">
+            <div className="list-grid1 list-past">
               <h3>{walk.date}</h3>
             </div>
             <div className="list-grid2">
@@ -25,8 +27,6 @@ export default async function WalkList() {
               <h3>{walk.post_code}</h3>
             </div>
           </div>
-        ) : (
-          ''
         )
       )}
       {walks.length === 0 && <p>There are no booked walks.</p>}

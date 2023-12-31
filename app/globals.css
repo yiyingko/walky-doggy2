@@ -89,6 +89,43 @@ nav {
     margin-bottom: 20px;
 }
 
+/*user-dashboard*/
+/*main page*/
+.dash-wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.dash-container {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* WalkList*/
+.list-container {
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.list-grid1 {
+    background-color: #8bf1c1;
+    border-radius: 10px 0 0 10px;
+    margin-right: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.list-past {
+    background-color: #97e7f5;
+}
+
 /* Footer */
 .footer {
     position: fixed;
