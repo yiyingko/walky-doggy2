@@ -1,3 +1,5 @@
+export const dynamicParams = true; // default val = true
+
 async function getWalk(id) {
   const res = await fetch(`http://localhost:4000/walks/${id}`, {
     next: {
