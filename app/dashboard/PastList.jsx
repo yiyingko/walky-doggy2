@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 async function getWalks() {
   const res = await fetch('http://localhost:4000/walks', {
     next: {
@@ -17,7 +19,11 @@ export default async function WalkList() {
         walk.date > new Date(Date.now()).toISOString().slice(0, 10) ? (
           ''
         ) : (
-          <div className="list-container" key={walk.id}>
+          <Link
+            href={`/dashboard/${walk.id}`}
+            className="list-container"
+            key={walk.id}
+          >
             <div className="list-grid1 list-past">
               <h3>{walk.date}</h3>
             </div>
@@ -26,7 +32,7 @@ export default async function WalkList() {
               <h3>{walk.pick_up_at.slice(0, 20)}...</h3>
               <h3>{walk.post_code}</h3>
             </div>
-          </div>
+          </Link>
         )
       )}
       {walks.length === 0 && <p>There are no booked walks.</p>}

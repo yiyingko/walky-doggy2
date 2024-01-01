@@ -107,11 +107,17 @@ nav {
     width: 400px;
     height: 150px;
     background-color: white;
+    color: black;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 3fr 5fr;
     cursor: pointer;
     margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.list-container:visited {
+    color: black;
 }
 
 .list-grid1 {
