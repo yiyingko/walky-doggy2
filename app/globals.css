@@ -132,6 +132,29 @@ nav {
     background-color: #97e7f5;
 }
 
+
+
+/*404 not found*/
+.not-found {
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+}
+
+.not-found-text p {
+    text-align: center;
+    font-size: 28px;
+}
+
+/*loading*/
+.loading {
+    display: grid;
+    place-items: center;
+    margin-top: 200px;
+
+}
+
+
 /* Footer */
 .footer {
     position: fixed;

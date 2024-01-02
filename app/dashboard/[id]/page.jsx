@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 export const dynamicParams = true; // default val = true
 
 async function getWalk(id) {
@@ -6,6 +7,10 @@ async function getWalk(id) {
       revalidate: 60,
     },
   });
+
+  if (!res.ok) {
+    notFound();
+  }
 
   return res.json();
 }
