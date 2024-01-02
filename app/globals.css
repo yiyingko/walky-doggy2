@@ -94,13 +94,29 @@ nav {
 .dash-wrapper {
     display: grid;
     place-items: center;
+    margin-top: 50px;
+    margin-left: 100px;
 }
 
 .dash-container {
-    width: 1000px;
+    width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
+
+.dash-list {
+    width: 450px;
+    height: 600px;
+    overflow: scroll;
+    scrollbar-color: rgb(236, 180, 180) rgb(238, 238, 173);
+    scrollbar-width: 15px;
+}
+
+
+
+
+
 
 /* WalkList*/
 .list-container {

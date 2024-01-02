@@ -1,3 +1,5 @@
+import BookingForm from './BookingForm';
+
 export default function Form() {
   return (
     <main>
@@ -7,6 +9,7 @@ export default function Form() {
           <p>
             <small>Currently Booked Walks</small>
           </p>
+          <BookingForm />
         </div>
       </nav>
     </main>

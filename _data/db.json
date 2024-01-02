@@ -1,7 +1,7 @@
 {
   "walks": [
     {
-      "id": "1",
+      "id": 1,
       "dog_name": "Meli",
       "pick_up_at": "255 Greenwich South Street",
       "post_code": "SE12 3GG",
@@ -9,7 +9,7 @@
       "user_email": "mario@netninja.dev"
     },
     {
-      "id": "2",
+      "id": 2,
       "dog_name": "Rocco",
       "pick_up_at": "Utah Forest",
       "post_code": "SE14 3WY",
@@ -17,7 +17,7 @@
       "user_email": "mario@netninja.dev"
     },
     {
-      "id": "3",
+      "id": 3,
       "dog_name": "Bobby",
       "pick_up_at": "33 Greenwich High Road",
       "post_code": "SE10 8AB",
@@ -25,12 +25,60 @@
       "user_email": "mario@netninja.dev"
     },
     {
-      "id": "4",
-      "dog_name": "Mary",
-      "pick_up_at": "33 Greenwich High Road",
-      "post_code": "SE10 8AB",
-      "date": "2023-07-08",
-      "user_email": "mario@netninja.dev"
+      "dog_name": "test 1",
+      "pick_up_at": "test 1",
+      "post_code": "test 1",
+      "date": "2024-06-06",
+      "user_email": "tota@learnnextjs.dev",
+      "id": 4
+    },
+    {
+      "dog_name": "test 2",
+      "pick_up_at": "test 2",
+      "post_code": "test 2",
+      "date": "2024-01-01",
+      "user_email": "tota@learnnextjs.dev",
+      "id": 5
+    },
+    {
+      "dog_name": "test 3",
+      "pick_up_at": "test 3",
+      "post_code": "test 3",
+      "date": "2023-09-09",
+      "user_email": "tota@learnnextjs.dev",
+      "id": 6
+    },
+    {
+      "dog_name": "test 4",
+      "pick_up_at": "test 4",
+      "post_code": "test 4",
+      "date": "2022-05-05",
+      "user_email": "tota@learnnextjs.dev",
+      "id": 7
+    },
+    {
+      "dog_name": "test 5",
+      "pick_up_at": "test 5",
+      "post_code": "test 5",
+      "date": "2023-04-04",
+      "user_email": "tota@learnnextjs.dev",
+      "id": 8
+    },
+    {
+      "dog_name": "test 6",
+      "pick_up_at": "test 6",
+      "post_code": "test 6",
+      "date": "2024-09-09",
+      "user_email": "tota@learnnextjs.dev",
+      "id": 9
+    },
+    {
+      "dog_name": "test 7",
+      "pick_up_at": "test 7",
+      "post_code": "test 7",
+      "date": "2024-08-08",
+      "user_email": "tota@learnnextjs.dev",
+      "id": 10
     }
   ]
 }
