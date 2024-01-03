@@ -37,7 +37,7 @@ export default function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-1/2">
+    <form onSubmit={handleSubmit}>
       <label>
         <span>Dog Name:</span>
         <input
