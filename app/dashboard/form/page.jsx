@@ -2,13 +2,10 @@ import BookingForm from './BookingForm';
 
 export default function Form() {
   return (
-    <main>
-      <nav>
-        <div>
-          <h2>Booking form</h2>
-          <p>
-            <small>Currently Booked Walks</small>
-          </p>
+    <main className="walk-form">
+      <nav className="walk-form-nav">
+        <div className="walk-form-wrap">
+          <h2>Booking Form</h2>
           <BookingForm />
         </div>
       </nav>

@@ -37,10 +37,11 @@ export default function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="booking-form" onSubmit={handleSubmit}>
       <label>
         <span>Dog Name:</span>
         <input
+          className="bookfrom-input"
           required
           type="text"
           onChange={(e) => setDogName(e.target.value)}
@@ -50,6 +51,7 @@ export default function BookingForm() {
       <label>
         <span>Pick Up Address:</span>
         <input
+          className="bookfrom-input"
           required
           onChange={(e) => setPickUpAt(e.target.value)}
           value={pick_up_at}
@@ -58,6 +60,7 @@ export default function BookingForm() {
       <label>
         <span>Post Code:</span>
         <input
+          className="bookfrom-input"
           required
           onChange={(e) => setPostCode(e.target.value)}
           value={post_code}
@@ -66,13 +69,14 @@ export default function BookingForm() {
       <label>
         <span>Date:</span>
         <input
+          className="bookfrom-input"
           required
           onChange={(e) => setDate(e.target.value)}
           value={date}
           placeholder="yyyy-mm-dd"
         />
       </label>
-      <button disabled={isLoading}>
+      <button className="form-btn" disabled={isLoading}>
         {isLoading && <span>Adding...</span>}
         {!isLoading && <span>Book a Walk</span>}
       </button>
