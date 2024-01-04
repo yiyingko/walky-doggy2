@@ -46,6 +46,11 @@ nav {
     cursor: pointer;
 }
 
+.nav-btn:hover {
+    background-color: #97e7f5;
+}
+
+
 .link-text {
     text-decoration: none;
 }
