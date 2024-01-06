@@ -2,6 +2,7 @@ import { Literata } from 'next/font/google';
 import Image from 'next/image';
 import Dog from '../(home)/dog-2.jpg';
 import Navbar from '../components/Navbar';
+import Link from 'next/link';
 
 const literata = Literata({
   subsets: ['latin'],
@@ -23,7 +24,9 @@ export default function Home() {
             <p className={literata.className}>
               Your daily dog walk with our professional dog walkers make easy.
             </p>
-            <button className="nav-btn">Join Us</button>
+            <Link href="/signup">
+              <button className="nav-btn">Join Us</button>
+            </Link>
           </div>
           <div className="hero-2">
             <div className="hero-3">

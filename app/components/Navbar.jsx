@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Logo from '../components/logo.svg';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -12,7 +13,10 @@ export default function Navbar() {
         height={100}
         quality={100}
       />
-      <button className="nav-btn">Log In</button>
+
+      <Link href="/login">
+        <button className="nav-btn">Log In</button>
+      </Link>
     </nav>
   );
 }
