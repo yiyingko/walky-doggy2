@@ -10,10 +10,11 @@ export default function Login() {
   };
 
   return (
-    <main>
-      <h2>Login</h2>
-
-      <AuthForm handleSubmit={handleSubmit} />
+    <main className="auth-wraper">
+      <div className="auth-container">
+        <h2>Login</h2>
+        <AuthForm handleSubmit={handleSubmit} />
+      </div>
     </main>
   );
 }
