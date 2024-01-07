@@ -218,6 +218,38 @@ nav {
     background-color: #97e7f5;
 }
 
+/*authform*/
+.auth-wraper {
+    display: grid;
+    place-items: center;
+}
+
+.auth-container {
+    margin-top: 50px;
+    width: 400px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.auth-container h2 {
+    text-align: center;
+}
+
+.authform {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.authform-span {
+    margin-right: 10px;
+}
+
+.authform-label {
+    margin-left: 20px;
+}
 
 
 /*404 not found*/

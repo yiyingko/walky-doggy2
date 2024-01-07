@@ -7,9 +7,12 @@ export default function AuthForm({ handleSubmit }) {
   const [password, setPassword] = useState('');
 
   return (
-    <form onSubmit={(e) => handleSubmit(e, email, password)}>
-      <label>
-        <span>Email:</span>
+    <form
+      className="authform"
+      onSubmit={(e) => handleSubmit(e, email, password)}
+    >
+      <label className="authform-label">
+        <span className="authform-span">Email:</span>
         <input
           type="email"
           onChange={(e) => setEmail(e.target.value)}
@@ -17,8 +20,8 @@ export default function AuthForm({ handleSubmit }) {
           required
         />
       </label>
-      <label>
-        <span>Password:</span>
+      <label className="authform-label">
+        <span className="authform-span">Password:</span>
         <input
           type="password"
           onChange={(e) => setPassword(e.target.value)}

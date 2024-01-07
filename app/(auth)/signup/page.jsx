@@ -10,10 +10,11 @@ export default function Signup() {
   };
 
   return (
-    <main>
-      <h2>Sign up</h2>
-
-      <AuthForm handleSubmit={handleSubmit} />
+    <main className="auth-wraper">
+      <div className="auth-container">
+        <h2>Sign up</h2>
+        <AuthForm handleSubmit={handleSubmit} />
+      </div>
     </main>
   );
 }
