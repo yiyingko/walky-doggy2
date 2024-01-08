@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../components/logo.svg';
 
-export default function Navbar() {
+export default function Navbar({ user }) {
   return (
     <nav>
       <Link href="/">
@@ -30,6 +30,7 @@ export default function Navbar() {
             Dashboard
           </Link>
         </div>
+        {user && <span>Hello, {user.email}</span>}
       </div>
       <button className="nav-btn">Log Out</button>
     </nav>
