@@ -30,7 +30,9 @@ export default function Navbar({ user }) {
             Dashboard
           </Link>
         </div>
-        {user && <span>Hello, {user.email}</span>}
+        <div className="nav-userdisplay">
+          {user && <span>Hello, {user.email}</span>}
+        </div>
       </div>
       <button className="nav-btn">Log Out</button>
     </nav>
