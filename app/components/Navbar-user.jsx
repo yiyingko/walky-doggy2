@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../components/logo.svg';
+import LogoutButton from './LogoutButton';
 
 export default function Navbar({ user }) {
   return (
@@ -34,7 +35,7 @@ export default function Navbar({ user }) {
           {user && <span>Hello, {user.email}</span>}
         </div>
       </div>
-      <button className="nav-btn">Log Out</button>
+      <LogoutButton />
     </nav>
   );
 }
