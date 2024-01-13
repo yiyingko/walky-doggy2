@@ -24,13 +24,23 @@ export default function BookingForm() {
       user_email: 'tota@learnnextjs.dev',
     };
 
-    const res = await fetch('http://localhost:4000/walks', {
+    const res = await fetch('http://localhost:3000/api/walks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newWalk),
     });
 
-    if (res.status === 201) {
+    // if (res.status === 201) {
+    //   router.push('/dashboard');
+    //   router.refresh();
+    // }
+
+    const json = await res.json();
+
+    if (json.error) {
+      console.log(error.message);
+    }
+    if (json.data) {
       router.push('/dashboard');
       router.refresh();
     }
