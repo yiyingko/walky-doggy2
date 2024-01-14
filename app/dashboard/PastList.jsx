@@ -1,13 +1,24 @@
 import Link from 'next/link';
+import { cookies } from 'next/headers';
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 
 async function getWalks() {
-  const res = await fetch('http://localhost:4000/walks', {
-    next: {
-      revalidate: 0, // use 0 to opt out of using cache
-    },
-  });
+  const supabase = createServerComponentClient({ cookies });
 
-  return res.json();
+  const { data, error } = await supabase.from('walks').select();
+
+  if (error) {
+    console.log(error.message);
+  }
+
+  return data;
+  // const res = await fetch('http://localhost:4000/walks', {
+  //   next: {
+  //     revalidate: 0, // use 0 to opt out of using cache
+  //   },
+  // });
+
+  // return res.json();
 }
 
 export default async function WalkList() {
