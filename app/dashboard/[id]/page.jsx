@@ -1,18 +1,42 @@
 import { notFound } from 'next/navigation';
+import { cookies } from 'next/headers';
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
+
 export const dynamicParams = true; // default val = true
 
-async function getWalk(id) {
-  const res = await fetch(`http://localhost:4000/walks/${id}`, {
-    next: {
-      revalidate: 60,
-    },
-  });
+export async function generateMetadata({ params }) {
+  const supabase = createServerComponentClient({ cookies });
 
-  if (!res.ok) {
+  const { data: walk } = await supabase
+    .from('walks')
+    .select()
+    .eq('id', params.id)
+    .single();
+
+  return {
+    title: `Walky Doggy | ${walk?.dog_name || 'walk not Found'}`,
+  };
+}
+
+async function getWalk(id) {
+  const supabase = createServerComponentClient({ cookies });
+
+  const { data } = await supabase.from('walks').select().eq('id', id).single();
+
+  if (!data) {
     notFound();
   }
 
-  return res.json();
+  return data;
+  // const res = await fetch(`http://localhost:4000/walks/${id}`, {
+  //   next: {
+  //     revalidate: 60,
+  //   },
+  // });
+  // if (!res.ok) {
+  //   notFound();
+  // }
+  // return res.json();
 }
 
 export default async function WalkDetails({ params }) {
