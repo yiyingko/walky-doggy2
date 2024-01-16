@@ -25,6 +25,8 @@ async function getWalks() {
 
 export default async function WalkList() {
   const walks = await getWalks();
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase.auth.getSession();
 
   return (
     <>

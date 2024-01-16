@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { cookies } from 'next/headers';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 
+import DeleteBtn from './DeleteBtn';
+
 export const dynamicParams = true; // default val = true
 
 export async function generateMetadata({ params }) {
@@ -43,6 +45,9 @@ export default async function WalkDetails({ params }) {
   // const id = params.id
   const walk = await getWalk(params.id);
 
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase.auth.getSession();
+
   return (
     <main>
       <nav>
@@ -51,6 +56,11 @@ export default async function WalkDetails({ params }) {
       <div>
         <h3>{walk.dog_name}</h3>
         <small>Created by {walk.user_email}</small>
+      </div>
+      <div>
+        <div>
+          <DeleteBtn id={walk.id} />
+        </div>
       </div>
     </main>
   );
