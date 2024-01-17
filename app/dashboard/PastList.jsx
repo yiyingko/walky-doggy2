@@ -27,7 +27,7 @@ export default async function WalkList() {
   return (
     <>
       {walks.map((walk) =>
-        walk.date > new Date(Date.now()).toISOString().slice(0, 10) ? (
+        walk.date > new Date(Date.now()).toISOString() ? (
           ''
         ) : (
           <Link
@@ -36,7 +36,11 @@ export default async function WalkList() {
             key={walk.id}
           >
             <div className="list-grid1 list-past">
-              <h3>{walk.date}</h3>
+              <h3 className="day-time">
+                {walk.date.slice(0, 10)}
+                <br />
+                <span className="time">{walk.date.slice(11, 16)}</span>
+              </h3>
             </div>
             <div className="list-grid2">
               <h2>{walk.dog_name}</h2>

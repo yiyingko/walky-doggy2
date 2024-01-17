@@ -156,6 +156,16 @@ nav {
     place-items: center;
 }
 
+.day-time {
+    text-align: center;
+}
+
+.time {
+    font-size: 24px;
+    color: #666262;
+
+}
+
 .list-past {
     background-color: #97e7f5;
 }
@@ -206,6 +216,11 @@ nav {
     margin-bottom: 20px;
     color: rgb(95, 94, 94);
 
+}
+
+.day-picker {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
 .form-btn {

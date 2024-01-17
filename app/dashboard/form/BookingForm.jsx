@@ -1,7 +1,8 @@
 'use client';
-
+import 'react-datepicker/dist/react-datepicker.css';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import DatePicker from 'react-datepicker';
 
 export default function BookingForm() {
   const router = useRouter();
@@ -9,8 +10,8 @@ export default function BookingForm() {
   const [dog_name, setDogName] = useState('');
   const [pick_up_at, setPickUpAt] = useState('');
   const [post_code, setPostCode] = useState('');
-  const [date, setDate] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [date, setDate] = useState(new Date());
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -76,16 +77,20 @@ export default function BookingForm() {
           value={post_code}
         />
       </label>
-      <label>
+      <label className="day-picker">
         <span>Date:</span>
-        <input
+        <DatePicker
           className="bookfrom-input"
-          required
-          onChange={(e) => setDate(e.target.value)}
+          showTimeSelect
+          minTime={new Date(0, 0, 0, 9, 30)}
+          maxTime={new Date(0, 0, 0, 19, 0)}
+          selected={date}
+          onChange={(date) => setDate(date)}
+          dateFormat="MMMM d, yyyy h:mmaa"
           value={date}
-          placeholder="yyyy-mm-dd"
         />
       </label>
+
       <button className="form-btn" disabled={isLoading}>
         {isLoading && <span>Adding...</span>}
         {!isLoading && <span>Book a Walk</span>}
