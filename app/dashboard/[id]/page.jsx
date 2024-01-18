@@ -59,7 +59,9 @@ export default async function WalkDetails({ params }) {
       </div>
       <div>
         <div>
-          <DeleteBtn id={walk.id} />
+          {walk.date > new Date(Date.now()).toISOString() && (
+            <DeleteBtn id={walk.id} />
+          )}
         </div>
       </div>
     </main>
