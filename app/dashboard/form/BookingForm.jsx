@@ -13,6 +13,16 @@ export default function BookingForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [date, setDate] = useState(new Date());
 
+  const regex = /^([A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}|GIR ?0A{2})$/;
+
+  const validate = (field, regex) => {
+    if (regex.test(field.value)) {
+      field.className = 'valid';
+    } else {
+      field.className = 'invalid';
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -22,7 +32,7 @@ export default function BookingForm() {
       pick_up_at,
       post_code,
       date,
-      user_email: 'tota@learnnextjs.dev',
+      // user_email: 'tota@learnnextjs.dev',
     };
 
     const res = await fetch('http://localhost:3000/api/walks', {
@@ -73,9 +83,9 @@ export default function BookingForm() {
         <input
           className="bookfrom-input"
           required
-          onChange={(e) => setPostCode(e.target.value)}
-          value={post_code}
+          onChange={(e) => setPostCode(validate(e.target, regex))}
         />
+        <p className="validation-text">Must be UK valid !</p>
       </label>
       <label className="day-picker">
         <span>Date:</span>

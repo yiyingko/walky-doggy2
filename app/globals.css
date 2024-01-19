@@ -215,6 +215,7 @@ nav {
     margin-right: 70px;
     margin-bottom: 20px;
     color: rgb(95, 94, 94);
+    outline: none;
 
 }
 
@@ -238,6 +239,47 @@ nav {
 
 .form-btn:hover {
     background-color: #97e7f5;
+}
+
+/* post code validation*/
+input.valid {
+    border: 3px solid #1fdf0a;
+    font-size: 24px;
+    width: 300px;
+    float: right;
+    border-radius: 5px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    color: rgb(95, 94, 94);
+    outline: none;
+}
+
+input.invalid {
+    border: 3px solid rgb(239, 69, 69);
+    font-size: 24px;
+    width: 300px;
+    float: right;
+    border-radius: 5px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    color: rgb(95, 94, 94);
+    outline: none;
+}
+
+input+p {
+    font-family: arial;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(246, 111, 111);
+    opacity: 0;
+    height: 0;
+}
+
+input.invalid+p {
+    opacity: 1;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 /*authform*/
