@@ -3,6 +3,8 @@ import { Archivo } from 'next/font/google';
 
 import Footer from './components/Footer';
 
+export const dynamic = 'force-dynamic';
+
 const archivo = Archivo({ subsets: ['latin'] });
 
 export const metadata = {
