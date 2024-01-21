@@ -83,7 +83,10 @@ export default function BookingForm() {
         <input
           className="bookfrom-input"
           required
-          onChange={(e) => setPostCode(validate(e.target, regex))}
+          onChange={(e) =>
+            validate(e.target, regex) || setPostCode(e.target.value)
+          }
+          value={post_code}
         />
         <p className="validation-text">Must be UK valid !</p>
       </label>
