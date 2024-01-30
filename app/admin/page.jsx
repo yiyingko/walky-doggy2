@@ -1,15 +1,32 @@
+import WalkList from '../dashboard/WalkList';
+import PastList from '../dashboard/PastList';
+import { Suspense } from 'react';
+import Loading from '../loading';
+
 export default function Admin() {
   return (
-    <main>
-      <h2>Admin Dashboard</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-        repellendus tempore, exercitationem odit, quasi doloremque possimus
-        recusandae alias sequi totam soluta natus iure eius, obcaecati sint
-        dolores blanditiis aspernatur quo officia iusto ut. Et, aliquid sed
-        voluptates iste cum totam, facere explicabo, fugit suscipit ratione
-        aspernatur consequuntur ex mollitia quaerat?
-      </p>
-    </main>
+    <div className="dash-wrapper">
+      <main className="dash-container">
+        <div>
+          <div className="dash-heading">
+            <h2>Currently booked walks.</h2>
+          </div>
+          <div className="dash-list">
+            <Suspense fallback={<Loading />}></Suspense>
+            <WalkList />
+          </div>
+        </div>
+
+        <div>
+          <div className="dash-heading">
+            <h2>Check Past walk record</h2>
+          </div>
+          <div className="dash-list">
+            <Suspense fallback={<Loading />}></Suspense>
+            <PastList />
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }
